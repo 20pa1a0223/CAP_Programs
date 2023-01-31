@@ -1,0 +1,27 @@
+//  Single Number
+
+import java.util.*;
+class Solution {
+    public int singleNumber(int[] nums) {
+        int c=0;
+        HashMap<Integer,Integer> v=new HashMap<Integer,Integer>();
+        for(int i=0;i<nums.length;i++){
+            if(!v.containsKey(nums[i])){
+                v.put(nums[i],1);
+            }
+            else{
+                v.put(nums[i],(v.get(nums[i]))+1);
+            }
+
+        }
+        for(Map.Entry<Integer,Integer> g:v.entrySet()){
+            if(g.getValue()==1){
+                c=g.getKey();
+
+        }
+    
+    }
+
+    return c;
+}
+}

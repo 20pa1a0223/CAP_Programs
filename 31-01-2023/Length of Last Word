@@ -1,0 +1,17 @@
+// Length of Last Word
+
+class Solution {
+    public int lengthOfLastWord(String s) {
+        int m=0;
+        int v=0;
+      for(int j=s.length()-1;j>=0;j--){
+          if(Character.isLetter(s.charAt(j))){
+              m=j;
+            break;
+          }
+          }
+          String h=s.substring(0,m+1);
+          v=h.lastIndexOf(" ");
+           return m-v;     
+    }
+    }
